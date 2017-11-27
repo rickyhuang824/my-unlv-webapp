@@ -1,0 +1,12 @@
+.navbar-bg {
+  background-color: red;
+}
+
+a.nav-link {
+  color:white;
+  padding-right: 60px !important;
+}
+
+.rbc-calendar{
+  padding: 50px;
+}
