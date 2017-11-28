@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './login.css';
 import BG_IMG from '../assets/login-background.jpg'
+import Axios from 'axios'
 
 class Login extends Component {
   constructor() {
@@ -21,10 +22,23 @@ class Login extends Component {
   onSubmit = event => {
     event.preventDefault()
 
-    if(this.state.nshe_id !== '100' || this.state.password !== '1234')
-      this.setState({err_msg: 'invalid NSHE ID or Password'})
-    else
-        this.props.history.push('/schedule')
+    Axios
+      .post('http://localhost:3030/login', {
+        nshe_id: this.state.nshe_id, password: this.state.password
+      })
+
+      .then(result => {
+        if (result.status === 200)
+          this.props.history.push('/schedule')
+      })
+
+      .catch( () => {
+        this.setState({err_msg: 'NSHE ID and Password are not matched'})
+      })
+    // if(this.state.nshe_id !== '100' || this.state.password !== '1234')
+    //   this.setState({err_msg: 'invalid NSHE ID or Password'})
+    // else
+    //     this.props.history.push('/schedule')
   }
   
   
