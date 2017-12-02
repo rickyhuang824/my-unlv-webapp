@@ -24,7 +24,7 @@ Instructions (Readme)
 -   N stands for Node.js: JavaScript runtime environment that runs
     the back-end.
 
-<img src="media/image1.png" width="624" height="272" />
+<img src="Readme_Image.png" width="624" height="272" />
 
 (note: API stands for application programming interface, it is the part
 of the server that receives requests and sends response(s).)
