@@ -1,0 +1,266 @@
+<!--Implementation of class search using JavaScript--> 
+
+<!DOCTYPE HTML> 
+	<head>
+		<meta charset="utf-8"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Search for classes - Add, drop, swap</title>
+		<link rel="stylesheet" type="text/css" media="screen" href="search_class_css/bootstrap.css" />
+		<link href='https://fonts.googleapis.com/css?family=Slabo+27px|Source+Sans+Pro|Montserrat|Bitter|Yanone+Kaffeesatz|Josefin+Sans|Pacifico|Abril+Fatface|Questrial|Architects+Daughter|Gudea|Kreon|Satisfy|Economica|Handlee' rel='stylesheet' type='text/css'>	
+
+		<style type="text/css">
+
+			ul {list-style: none;}
+			.nav { 
+				height: 50px;
+				background-color: #e2222b;
+				color: #fff;
+			}
+			.nav a { 
+				display: inline-block;
+				text-decoration: none; 
+				color: #fff;
+				padding: 10px 10px 5px 10px;
+				height: 100%;
+			}
+			.nav a:hover { background: #840e14;}
+		</style>
+
+		<script> 
+			function sortFunction(name,num) {
+			  var input, filter, table, tr, td, i;
+			  input = document.getElementById(name);
+			  filter = name.value.toUpperCase();
+			  table = document.getElementById("classTable");
+			  tr = table.getElementsByTagName("tr");
+			  for (i = 0; i < tr.length; i++) {
+			    td = tr[i].getElementsByTagName("td")[num];
+			    if (td) {
+			      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+			        tr[i].style.display = "";
+			      } 
+			      else {
+			        tr[i].style.display = "none";
+			      }
+			    }       
+			  }
+			}
+
+		</script>	
+	</head>
+
+	<body> 
+			<div class = "nav">
+					<a class="navbar-brand" href="/">
+						<img src="images/unlv_letters.png" width="40" height="30" alt="">
+					</a>
+					<ul class="nav"> 
+						<li class="nav-item">
+							<a class="nav-link" href="admission.html">ADMISSIONS <span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="graduate.html">GRADUATE</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="undergrad.html">UNDERGRADUATE</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="payment.html">PAYMENT</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="demographics.html">DEMOGRAPHICS</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/schedule">SCHEDULE</a>
+						</li>
+						<li class="nav-item">
+							<a class='nav-link' href='finance.html'>FINANCES</a>
+						</li>
+					</ul>
+				</div>
+	<div class="container">
+
+	<div class= "row">
+
+	<div class="col-md-3">
+		<h2>Search for classes</h2>
+		
+		<ul> 
+			<li>  
+				<label>Term: </label><br>
+				<select name="semester">
+					<option value="Spring2018">Spring 2018</option>
+				</select>
+			</li>
+
+			<li>
+				<label>Subject: </label><br>
+				<input type="text" id="subjectInput" onkeyup="sortFunction(document.getElementById('subjectInput'),0)" name="subject" >
+			</li>
+
+			<li>
+				<label>Course Number: </label><br>
+				<input type="text" id="courseInput" onkeyup="sortFunction(document.getElementById('courseInput'),1)" name="course" >
+			</li>
+
+			<li>
+				<label>Instructor:</label><br>
+				<input type="text" id="instrInput" onkeyup="sortFunction(document.getElementById('instrInput'),2)" name="coursenumber" >
+			</li>			
+
+			<li>
+				<label>Course Career: </label><br>
+				<select name="coursecareer"> 
+					<option value="">Undergraduate</option>
+				</select>
+			</li>
+
+		</ul>
+
+
+	</div>
+
+	<div class="col-md-9">
+
+		<table id="classTable" class="table table-hover">
+		<!--<table id="classTable">--> 
+			<tr>
+				<th>SUBJECT</th>
+				<th>COURSE NUMBER</th>
+				<th>INSTRUCTOR</th>
+				<th>DATE &amp; TIME</th>
+				<th>SELECTION</th>
+			</tr>
+
+			<!--individual class, CS--> 
+			<tr> 
+				<td>CS</td>
+				<td>135</td>
+				<td>Maria Misch</td>
+				<td>MoWe 10:00 AM-11:15AM</td>	
+				<td>
+					<form action="#" type="post"><input type="submit" value="Add" class="btn btn-sm"></form>
+				</td>			
+			</tr> 
+
+			<tr> 
+				<td>CS</td>
+				<td>135</td>
+				<td>James Andro-Vasko</td>
+				<td>TuTh 5:30PM-6:45PM</td>	
+				<td><form action="#" type="post"><input type="submit" value="Add" class="btn btn-sm"></form></td>			
+			</tr> 
+
+			<tr> 
+				<td>CS</td>
+				<td>135</td>
+				<td>Maria Misch</td>
+				<td>TuTh 10:00 AM-11:15AM</td>	
+				<td><form action="#" type="post"><input type="submit" value="Add" class="btn btn-sm"></form></td>			
+			</tr> 
+
+			<!--individual class, CS--> 
+			<tr> 
+				<td>CS</td>
+				<td>202</td>
+				<td>James Andro-Vasko</td>
+				<td>TuTh 10:00AM-11:15AM</td>	
+				<td><form action="#" type="post"><input type="submit" value="Add" class="btn btn-sm"></form></td>			
+			</tr> 
+
+			<tr> 
+				<td>CS</td>
+				<td>202</td>
+				<td>Evangelos Yfantis</td>
+				<td>TuTh 10:00AM-11:15AM</td>	
+				<td><form action="#" type="post"><input type="submit" value="Add" class="btn btn-sm"></form></td>			
+			</tr> 
+
+			<!--individual class, CS--> 
+			<tr> 
+				<td>CS</td>
+				<td>218</td>
+				<td>Edward Jorgensen</td>
+				<td>TuTh 5:30PM - 6:45PM</td>	
+				<td><form action="#" type="post"><input type="submit" value="Add" class="btn btn-sm"></form></td>			
+			</tr> 
+
+			<!--individual class, CS--> 
+			<tr> 
+				<td>CS</td>
+				<td>302</td>
+				<td>Wolfgang Bein</td>
+				<td>Fr 10:00AM-12:50PM</td>	
+				<td><form action="#" type="post"><input type="submit" value="Add" class="btn btn-sm"></form></td>			
+			</tr> 
+
+			<!--individual class, CS--> 
+			<tr> 
+				<td>CS</td>
+				<td>460</td>
+				<td>Jan Pedersen</td>
+				<td>TuTh 4:00PM-5:15PM</td>	
+				<td><form action="#" type="post"><input type="submit" value="Add" class="btn btn-sm"></form></td>			
+			</tr> 
+
+			<tr> 
+				<td>MATH</td>
+				<td>181</td>
+				<td>Douglas Burke</td>
+				<td>TuTh 1:00 PM-2:15PM</td>	
+				<td><form action="#" type="post"><input type="submit" value="Add" class="btn btn-sm"></form></td>			
+			</tr> 
+
+			<tr> 
+				<td>MATH</td>
+				<td>181</td>
+				<td>Xin Li</td>
+				<td>MoWe 10:00 AM-11:15AM</td>	
+				<td><form action="#" type="post"><input type="submit" value="Add" class="btn btn-sm"></form></td>			
+			</tr> 
+
+
+			<!--individual class, CS--> 
+			<tr> 
+				<td>MATH</td>
+				<td>181</td>
+				<td>Carryn Warren</td>
+				<td>TuTh 10:00AM-11:15AM</td>	
+				<td><form action="#" type="post"><input type="submit" value="Add" class="btn btn-sm"></form></td>			
+			</tr> 
+
+			<!--individual class, CS--> 
+			<tr> 
+				<td>MATH</td>
+				<td>251</td>
+				<td>Douglas Burke</td>
+				<td>TuTh 5:30PM - 6:45PM</td>	
+				<td><form action="#" type="post"><input type="submit" value="Add" class="btn btn-sm"></form></td>			
+			</tr> 
+
+			<!--individual class, CS--> 
+			<tr> 
+				<td>MATH</td>
+				<td>283</td>
+				<td>Jacob Blanton</td>
+				<td>Fr 10:00AM-12:50PM</td>	
+				<td><form action="#" type="post"><input type="submit" value="Add" class="btn btn-sm"></form></td>			
+			</tr> 
+
+			<!--individual class, CS--> 
+			<tr> 
+				<td>MATH</td>
+				<td>351</td>
+				<td>Douglas Burke</td>
+				<td>TuTh 4:00PM-5:15PM</td>	
+				<td><form action="#" type="post"><input type="submit" value="Add" class="btn btn-sm"></form></td>			
+			</tr> 
+
+		</table>
+
+	</div>
+
+	</div>
+	</div>
+	</body>
+</HTML> 

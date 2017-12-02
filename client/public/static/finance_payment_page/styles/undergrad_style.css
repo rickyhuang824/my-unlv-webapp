@@ -1,0 +1,82 @@
+body,
+html{
+    height: 100%;
+}
+
+img{
+    max-width: 100%;
+}
+
+
+/*Navbar styling*/
+.admission-container{
+    justify-content: center;
+    align-items: center;
+}
+
+.mycolor{
+    background-color: #E01E3B;
+}
+
+.myform i{
+    color: black;
+    padding-right: 10px;
+}
+
+.navbar-toggler{
+    font-size: 15px;
+}
+
+/*Navbar styling*/
+
+/*Showcase styling*/
+#showcase{
+    background: url("../images/darkunlvview.jpg") center center no-repeat;
+    height: 100%;
+    background-size: cover;
+    color: #fdfdfd;
+    text-align: center;
+    align-items: center;
+    float: none;
+    display: flex
+}
+
+
+#title{
+    padding-top: 0;
+    padding-bottom: 90px;
+}
+
+#left-side{
+    margin-top: 70px;
+}
+
+.card-left{
+    background-color: rgba(0,0,0,0.5);
+}
+
+.learn-more-btn:hover{
+    background-color: #E01E3B;
+}
+/*Showcase styling*/
+
+/*Info Sectio*/
+#info-section{
+    background: #333;
+    color: white;
+}
+
+.info-btns{
+    justify-content: center;
+}
+
+.info-btns .btn{
+    margin-left: 4px;
+}
+
+.a-tag-btns:hover{
+    background-color: #E01E3B;
+}
+
+
+/*Info Sectio*/

@@ -1,0 +1,56 @@
+/*Navbar styling*/
+.admission-container{
+    justify-content: center;
+    align-items: center;
+}
+
+.mycolor{
+    background-color: #E01E3B;
+}
+
+.myform i{
+    color: black;
+    padding-right: 10px;
+}
+
+.my-navbar-toggler{
+    font-size: 15px;
+}
+
+/*Navbar styling*/
+
+.admission-title{
+    padding-top: 20px;
+    text-align: center;
+}
+
+/*left side*/
+#left-side{
+    padding: 0;
+    background-image: url(../images/lied.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+}
+
+.undergrad-btn{
+    background-color: #E01E3B;
+}
+
+/*left side*/
+
+/*right side*/
+#right-side{
+    padding: 0;
+    background-image: url(../images/greenspunhall.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+}
+.grad-btn{
+    background-color: #E01E3B;
+}
+
+/*right side*/

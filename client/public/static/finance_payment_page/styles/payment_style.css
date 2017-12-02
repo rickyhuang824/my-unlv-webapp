@@ -1,0 +1,29 @@
+
+
+.mycontainer{
+    justify-content: center;
+    align-items: center;
+}
+
+
+.pay-title{
+    padding-top: 20px;
+    text-align: center;
+}
+
+#form i{
+    color: black;
+    padding-right: 10px;
+}
+
+#navbar-toggler{
+    font-size: 15px;
+}
+
+.mycolor{
+    background-color: #E01E3B;
+}
+
+#payment-button{
+    background-color: #E01E3B;
+}

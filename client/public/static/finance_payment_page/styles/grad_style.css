@@ -1,0 +1,85 @@
+body,
+html{
+    height: 100%;
+}
+
+
+/*Navbar styling*/
+.admission-container{
+    justify-content: center;
+    align-items: center;
+}
+
+.mycolor{
+    background-color: #E01E3B;
+}
+
+.myform i{
+    color: black;
+    padding-right: 10px;
+}
+
+.my-navbar-toggler{
+    font-size: 15px;
+}
+
+/*Navbar styling*/
+
+/*Info Section*/
+#jumbotron{
+    background-image: url("../images/librarybooks.jpg");
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+.jumbotron-container{
+    background-color: rgba(0,0,0,0.5);
+}
+
+
+.a-tag-btns:hover{
+    background-color: #E01E3B;
+}
+
+
+/*Info Section*/
+
+#title{
+    padding-bottom: 20px;
+}
+
+/*Admission Info section*/
+#admin-info-section{
+    background: #E01E3B;
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+.card-left{
+    background: transparent;
+    border: none;
+}
+
+.no-padding{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.admin-info-btn{
+    background-color: white;
+    color: black
+}
+
+.admin-info-btn:hover{
+    background-color: white;
+    color: #E01E3B;
+}
+
+#left-side{
+    margin-top: 50px;
+}
+
+#left-side h2{
+    margin-bottom: 30px;
+}
+/*Admission Info section*/

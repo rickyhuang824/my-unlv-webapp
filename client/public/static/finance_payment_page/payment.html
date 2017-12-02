@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Payment</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="BootStrap_v4/css/bootstrap.css">
+
+    <!--My custom CSS-->
+    <link rel="stylesheet" href="styles/payment_style.css">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light mycolor">
+        <a class="navbar-brand" href="/">
+            <img src="images/unlv_letters.png" width="40" height="30" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-toggler" aria-controls="navbar-toggler" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar-toggler">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+							<a class="nav-link" href="admission.html">ADMISSIONS <span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="graduate.html">GRADUATE</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="undergrad.html">UNDERGRADUATE</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="search_class.html">SEARCH CLASSES</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="demographics.html">DEMOGRAPHICS</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/schedule">SCHEDULE</a>
+						</li>
+						<li class="nav-item">
+							<a class='nav-link' href='finance.html'>FINANCES</a>
+						</li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" id="form">
+                <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                <a class="nav-link" href="#"><i class="fa fa-bell" aria-hidden="true"></i></a>
+                <a class="nav-link" href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
+            </form>
+        </div>
+    </nav>
+    <!--Navbar-->
+
+    <!-- Header -->
+    <div class="d-flex flex-row" id="home-section">
+        <div class="container-fluid mycontainer">
+            <div class="row">
+                <div class="mx-auto pay-title">
+                    <div class="col">
+                        <h1 class="display-4">Make Payment</h1>
+                    </div>
+                    <div class="col">
+                        <p class="lead">Listed below are the charges you are allowed to pay online.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8 col-sm-8 col-sm-6 col-sm-4 d-lg-block mx-auto" id="col">
+                <!--table-->
+                <div class="d-flex flex-row">
+                    <table class="table table-sm table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col">Description</th>
+                                <th scope="col">Outstanding Charges</th>
+                                <th scope="col">Payment Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>University of Nevada Las Vegas</td>
+                                <td><i class="fa fa-usd" aria-hidden="true"></i>5000.00</td>
+                                <td><i class="fa fa-usd" aria-hidden="true"></i>5000.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--table-->
+            </div>
+        </div>
+    </div>
+    <!-- Header -->
+
+    <!-- Payment Form -->
+    <div class="d-flex flex-row">
+        <div class="container py-3">
+            <div class="row">
+                <div class="col-md-8 col-sm-8 col-sm-6 col-sm-4 mx-auto">
+                    <div class="card" id="pay-invoice">
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h3 class="text-center">Pay Invoice</h3>
+                            </div>
+                            <hr>
+                            <form action="" method="post" novalidate="novalidate">
+                                <div class="form-group text-center">
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <i class="fa fa-cc-visa fa-2x" aria-hidden="true"></i>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <i class="fa fa-cc-mastercard fa-2x" aria-hidden="true"></i>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <i class="fa fa-cc-discover fa-2x" aria-hidden="true"></i>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <i class="fa fa-cc-amex fa-2x" aria-hidden="true"></i>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cc-payment" class="control-label mb-1">Payment Amount</label>
+                                    <input type="text" id="cc-payment" name="cc-payment" class="form-control" aria-required="true" aria-invalid="false" value="5000.00">
+                                </div>
+                                <div class="form-group has-success">
+                                    <label for="cc-name" class="control-label mb-1">Name on Card</label>
+                                    <input type="text" name="cc-name" id="cc-name" class="form-control cc-name valid" data-val="true" data-val-required="Please enter name on card" autocomplete="cc-name" aria-required="true" aria-invalid="false" aria-describedby="cc-name-error">
+                                    <span class="help-block field-validation-valid" data-valmsg-for="cc-name" data-valmsg-replace="true"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cc-number" class="control-label mb-1">Card Number</label>
+                                    <input id="cc-number" type="tel" name="cc-number" value="" class="form-control cc-number identified" data-val="true" data-val-required="Please enter card number" data-val-cc-number="Please enter valid card number" autocomplete="cc-number">
+                                    <span class="help-block" data-valmsg-for="cc-number" data-valmsg-replace="true"></span>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label for="cc-exp" class="control-label mb-1">Expiration</label>
+                                            <input name="cc-exp" type="tel" id="cc-exp" class="form-control cc-exp" value="" data-val="true" data-val-required="Please enter card expiration." data-val-cc-exp="Please enter valid month and year." placeholder="MM / yy" autocomplete="cc-exp">
+                                            <span class="help-block" data-valmsg-for="cc-exp" data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="secure-code" class="control-label mb-1">Security Code</label>
+                                        <div class="input-group">
+                                            <input type="tel" name="secure-code" id="secure-code" class="form-control cc-cvc" value="" data-val="true" data-val-required="Please enter security code" data-val-cc-cvc="Please enter valid security code" autocomplete="off">
+                                            <div class="input-group-addon">
+                                                <span class="fa fa-question-circle fa-lg" data-toggle="popover" data-container="body" data-html="true" data-title="Security Code"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="zip-code" class="control-label mb-1">Zip Code</label>
+                                    <input type="text" name="zip-code" id="zip-code" class="form-control" value="" data-val="true" data-val-required="Please enter zipcode" autocomplete="postal-code">
+                                    <span class="help-block" data-valmsg-for="zip-code" data-valmsg-replace="true"></span>
+                                </div>
+                                <div>
+                                    <button type="submit" name="payment-button" id="payment-button" class="btn btn-lg btn-block">
+                                        <i class="fa fa-lock" aria-hidden="true"></i>&nbsp;
+                                        <span id="payment-button-amount">
+                                            Pay <i class="fa fa-usd" aria-hidden="true"></i>5000.00
+                                        </span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        <!--card body-->
+                    </div>
+                    <!--card-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Payment Form -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="BootStrap_v4/js/bootstrap.js"></script>
+</body>
+
+</html>

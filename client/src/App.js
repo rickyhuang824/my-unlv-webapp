@@ -8,6 +8,10 @@ import LoginPage from './pages/login'
 import SchedulePage from './pages/schedule'
 
 class App extends Component {
+  componentDidMount(){
+    document.title = "myUNLV"
+  }
+  
   render() {
     return (
       <Router>

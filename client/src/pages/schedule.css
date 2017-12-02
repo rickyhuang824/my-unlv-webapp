@@ -10,3 +10,11 @@ a.nav-link {
 .rbc-calendar{
   padding: 50px;
 }
+
+.btn-group{
+  padding: 20px
+}
+
+.btn-toolbar{
+  padding: 20px;
+}

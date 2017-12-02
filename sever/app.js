@@ -3,10 +3,13 @@ const bodyParser = require('body-parser')
 const mongoose   = require('mongoose')
 const bluebird   = require('bluebird')
 const cors       = require('cors')
+const logger     = require('morgan')
 
 const app = express()
 
 app.use(cors())
+app.use(logger('dev'))
+
 mongoose.connect('mongodb://localhost/myunlv', { useMongoClient: true })
 mongoose.Promise = bluebird
 
